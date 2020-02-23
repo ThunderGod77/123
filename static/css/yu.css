@@ -1,0 +1,7 @@
+.example{
+    overflow-wrap: break-word;
+    word-wrap:break-word
+}
+.boxr{
+    width: 20%;
+}

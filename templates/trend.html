@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/yu.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Welcome Back!!</h1>
+        <p>Hello! {{name}}</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">king</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                 <form action = "/trending" method="POST" class="one">
+                    <button>Trending</button>
+                
+              </form>
+            </li>
+
+
+            <li class="nav-item ">
+              <a class="nav-link" href="#" href="#">
+                My Recommendations</a>
+              
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+
+
+    <h1>Anime</h1>
+    <div class="jumbotron">
+        <div class="d-flex flex-wrap justify-content-around">
+        {% for list in data_1 %}
+        <div class="card boxr" >
+            <div class="card-header example" id="nam_6" data-type="Music" data-name={{list[0]}} data-img="{{list[1]}}" data-w=TRUE><a href="https://en.wikipedia.org/wiki/{{list[0]}}">{{list[0]}}</a></div>
+            <div class="card-body" col-12 >
+                
+                <a href="{{list[2]}}"><img class="card-img" src="{{list[1] }}"  /></a>
+                 
+
+            </div>
+
+            <div class="checkbox card-footer">
+                &nbsp <label>&nbsp<input type="checkbox" value="">&nbsp Add to your collection</label>
+              </div>
+          </div>
+        {% endfor %}
+    </div>
+
+
+    </div>
+    <h1>Games</h1>
+    <div class="jumbotron">
+      <div class="d-flex flex-wrap justify-content-around">
+      {% for lista in data_2 %}
+      <div class="card boxr" >
+          <div class="card-header example" id="nam_6" data-type="Music" data-name={{lista[0]}} data-img="{{lista[1]}}" data-w=TRUE><a href="https://en.wikipedia.org/wiki/{{lista[0]}}">{{lista[0]}}</a></div>
+          <div class="card-body" col-12 >
+              
+              <a href="{{lista[2]}}"><img class="card-img" src="{{lista[1] }}"  /></a>
+               
+
+          </div>
+
+          <div class="checkbox card-footer">
+              &nbsp <label>&nbsp<input type="checkbox" value="">&nbsp Add to your collection</label>
+            </div>
+        </div>
+      {% endfor %}
+  </div>
+
+
+  </div>
+  <div class="jumbotron">
+    <div class="d-flex flex-wrap justify-content-around">
+    {% for lista in data_2 %}
+    <div class="card boxr" >
+        <div class="card-header example" id="nam_6" data-type="Music" data-name={{lista[0]}} data-img="{{lista[1]}}" data-w=TRUE><a href="https://en.wikipedia.org/wiki/{{lista[0]}}">{{lista[0]}}</a></div>
+        <div class="card-body" col-12 >
+            
+            <a href="{{lista[2]}}"><img class="card-img" src="{{lista[1] }}"  /></a>
+             
+
+        </div>
+
+        <div class="checkbox card-footer">
+            &nbsp <label>&nbsp<input type="checkbox" value="">&nbsp Add to your collection</label>
+          </div>
+      </div>
+    {% endfor %}
+</div>
+
+
+</div>
+<p></p>
+</body>
+</html>
