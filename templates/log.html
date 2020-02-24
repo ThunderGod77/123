@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ok.css') }}">
     <title>Document</title>
 </head>
 <body>
    
-    
+   
    
     
-
-    <div>
-        <h1>Login Page :</h1>
-    </div>
-    <div>
-        <form action = "/check" method="POST" >
-            <label for=""> Username</label>
-            <input type="text" name="name" placeholder="Enter your new username here">
-            <label for="">Password</label>
+<div class=" mn">
+    
+    <div class=" ko">
+        <h1 class="uy">Login  :</h1>
+    
+    
+        <form action = "/check" method="POST" class="okay">
+            <label for=""> Username</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="name" placeholder="Enter your new username here" class="vb">
+            <br/>
+            <label for="">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="password" name="password" placeholder="Enter your new password here">
+            <br/>
             <button class="one">Submit</button>
         </form>
+        </div>
+        
 
-    </div>
+    
+</div>
+
    
 </body>
 </html>

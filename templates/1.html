@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/1.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <form action = "/new" method="POST" class="one">
-            <button>REGISTER</button>
+    <div class="po row">
+        <div class=" col-sm-3 li">
+    <div class="">
+        <form action = "/check" method="GET" >
+            <button class="one">HOME</button>
         </form>
+        
+        
 
     </div>
-    <div>
-        <form action = "/login" method="POST" class="two">
-            <button>LOGIN</button>
-        </form>
-
+    &nbsp;
+    
+</div>
+    <div class="col-9 cont li ji">
+    <h1>Welcome to Project Opelus</h1>
+    <h3>Here you can store information about the animes you have watched and the games you are playing</h3>
     </div>
+    
+
+   
+</div>
+
+
+
+
+<div class="d-flex flex-wrap justify-content-center op">
+    {% for list in data_1 %}
+    <div class="card boxr ikl" >
+        <div class="card-body">
+        <img src="{{ url_for('static', filename='images/' + list + '.jpeg') }}" width=415px height=300px />
+         
+    </div> 
+                        
+
+        </div>
+
+        {% endfor %}
+      </div>
+    
+
 </body>
 </html>

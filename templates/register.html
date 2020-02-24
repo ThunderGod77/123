@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ok.css') }}">
     <title>Document</title>
 </head>
 <body>
@@ -12,19 +13,27 @@
    
     
 
-    <div>
-        <h1>Creating new account:</h1>
-    </div>
-    <div>
-        <form action = "/registered" method="POST" >
-            <label for="">New Username</label>
-            <input type="text" name="name" placeholder="Enter your new username here">
-            <label for="">Password</label>
-            <input type="password" name="password" placeholder="Enter your new password here">
+
+<div class=" mn">
+    
+    <div class=" ko">
+        <h1 class="uy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login  </h1>
+    
+    
+        <form action = "/registered" method="POST" class="okay">
+            <label for=""> New Username:</label>&nbsp;&nbsp;
+            <input type="text" name="name" placeholder="Enter your new username " class="vb">
+            <br/>
+            <label for="">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="password" placeholder="Enter your new password ">
+            <br/>
             <button class="one">Submit</button>
         </form>
+        </div>
+        
 
-    </div>
+    
+</div>
    
 </body>
 </html>

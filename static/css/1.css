@@ -1,3 +1,34 @@
-.one {
-    background-color: aqua;
+.li{
+    padding-top:50px;
+  
+    background-color: #0b0c10;
+    padding-bottom: 20px;
+    color: #66fcf1;
+}
+.one{
+    background-color: #1f2833;
+    color: #66fcf1;
+    border: #66fcf1 solid 2px;
+} 
+.two{
+    background-color: #1f2833;
+    color: #66fcf1;
+    border: #66fcf1 solid 2px;
+}
+.ji{
+    margin-top: -15px;
+}
+
+.boxr{
+    width: 20%;
+    
+    background-color: #282828;
+    color: #66fcf1;
+}
+.ikl{
+    background-color: #1f2833;
+    color: #66fcf1;
+}
+.op{
+    background-color: #0b0c10;
 }

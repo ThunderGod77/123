@@ -1,7 +1,60 @@
+html{
+
+}
 .example{
     overflow-wrap: break-word;
     word-wrap:break-word
+    
 }
 .boxr{
     width: 20%;
+    
+    background-color: #282828;
+    color: #66fcf1;
+}
+.boxrl{
+    width: 30%;
+    
+    background-color: #282828;
+    color: #66fcf1;
+}
+.header
+{
+    background-color: #1f2833;
+    color: #66fcf1;
+}
+
+body
+{
+    background-color: #0b0c10;
+    color: #66fcf1;
+}
+.op{
+    background-color: #0b0c10;
+}
+.ikl{
+    background-color: #1f2833;
+    color: #66fcf1;
+    border: white solid 1px;
+}
+a{
+    color: #66fcf1;
+}
+.uyt{
+    background-color: #282828;
+}
+.gh{
+    color:#66fcf1 ;
+}
+.bv{
+    border: #66fcf1 solid 1px;
+}
+.txt{
+    font-size: 20px;
+}
+.trending{
+    background-color: #0b0c10;
+    color: #66fcf1;
+    margin-top: -15px;
+    border: none;
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
   <nav class="navbar navbar-expand-lg navbar-light ik">
     <a class="navbar-brand gh text-white" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,26 +48,54 @@
       </form>
     </div>
 </nav>
-
-<div class="d-flex flex-wrap justify-content-center op">
-  {% for list in range(0,13) %}
-  <div class="card boxr ikl" >
-    <div class="card-header example" id="nam_6" ><a  href="https://myanimelist.net/anime/genre/{{data_3[list]}}">{{data_2[list]}}</a></div>
-      <div class="card-body">
-      <a href="https://myanimelist.net/anime/genre/{{data_3[list]}}"><img src="{{ url_for('static', filename='images/1' + data_1[list] + '.jpeg') }}" width=350px height=300px /></a>
-       
-  </div> 
-                      
-
-      </div>
-
-      {% endfor %}
+  
+  
+  
+  
+  
+  
+  
+  <div class="jumbotron header">
+    <h1 class="text-center">Bored!!</h1>
+        <h1 class="text-center">Here is a List of Random</h1>
+        <h2 class="text-center"> {{type}} </h2>
     </div>
-
     
 
 
 
+    <h1 class="text-center bv">Anime</h1>
+    <div class="jumbotron op">
+        <div class="d-flex flex-wrap justify-content-around op">
+        {% for list in data %}
+        <div class="card boxr ikl" >
+            <div class="card-header example" ><a href="https://en.wikipedia.org/wiki/{{list[0]}}">{{list[0]}}</a></div>
+            <div class="card-body uyt" col-12 >
+                
+                <a href="{{list[3]}}"><img class="card-img" height="450px" src="{{list[1] }}"  /></a>
+                 
+              </div> 
+           
+
+            <div class="checkbox card-footer">
+                &nbsp <label>&nbsp<input type="checkbox" value="">&nbsp Add to your collection</label>
+              </div>
+              <div class=" card-footer">
+                &nbsp <label>Score : {{list[5]}}</label>
+                <label>Genre : {{list[4]}}</label>
+                <label class="example"><a href="{{list[3]}}">{{list[2]}}</a> </label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+       
+    </div>
+
+
+    </div>
    
+   
+ 
+<p></p>
 </body>
 </html>
