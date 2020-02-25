@@ -130,17 +130,6 @@ def op():
 def trending():
     
     
-    res = requests.get("https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-added")
-    if res.status_code != 200:
-        raise Exception("ERROR: API request unsuccessful.")
-    data = res.json()
-    data_2=[]
-    for i in range (0,20) :
-        rate_1=data["results"][i]["name"]
-        e=data["results"][i]["clip"]["clips"]["640"]
-        img_src=data["results"][i]["clip"]["preview"]
-        l=[rate_1, img_src,e]
-        data_2.append(l)
     
 
     #res = requests.get("https://kitsu.io/api/edge/users?sort=-rating" )
@@ -155,7 +144,7 @@ def trending():
         l=[rate_1, img_src,e]
         data_1.append(l)
     
-    return render_template("trend.html",data_1=data_1,data_2=data_2)
+    return render_template("trend.html",data_1=data_1)
     
 @app.route("/ko",methods=["GET"])
 def indexy():
