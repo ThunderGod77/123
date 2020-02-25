@@ -130,6 +130,10 @@ def op():
 def trending():
     
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2c3276570432b60eb87f072acb27c369f3115ac9
     
 
     #res = requests.get("https://kitsu.io/api/edge/users?sort=-rating" )
